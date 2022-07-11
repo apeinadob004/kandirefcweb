@@ -176,7 +176,9 @@
         grid-column: 1/2;
         grid-row:2/2;
     }
-
+    .slide-inner{
+        margin-right: 50px;
+    }
 }
 
 
