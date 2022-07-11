@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- csss styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    
+
+    <!--google front  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&family=Splash&display=swap" rel="stylesheet">
+    <title>Kandire FC</title>
+
+    <!-- carusel/dinamismo -->
+	<style>
+        .slide {
+            position: relative;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+            margin-top: 26px;
+        }
+
+        .slide-inner {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: calc( 300px + 3em);
+        }
+
+        .slide-open:checked + .slide-item {
+            position: static;
+            opacity: 100;
+        }
+
+        .slide-item {
+            position: absolute;
+            opacity: 0;
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+
+        .slide-item img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .slide-control {
+            background: rgba(0, 0, 0, 0.28);
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            font-size: 40px;
+            height: 40px;
+            line-height: 35px;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            cursor: pointer;
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            text-align: center;
+            width: 40px;
+            z-index: 10;
+        }
+
+        .slide-control.prev {
+            left: 2%;
+        }
+
+        .slide-control.next {
+            right: 2%;
+        }
+
+        .slide-control:hover {
+            background: rgba(0, 0, 0, 0.8);
+            color: #aaaaaa;
+        }
+
+        #slide-1:checked ~ .control-1,
+        #slide-2:checked ~ .control-2,
+        #slide-3:checked ~ .control-3 {
+            display: block;
+        }
+
+        .slide-indicador {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .slide-indicador li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .slide-circulo {
+            color: #828282;
+            cursor: pointer;
+            display: block;
+            font-size: 35px;
+        }
+
+        .slide-circulo:hover {
+            color: #aaaaaa;
+        }
+
+        #slide-1:checked ~ .control-1 ~ .slide-indicador 
+             li:nth-child(1) .slide-circulo,
+        #slide-2:checked ~ .control-2 ~ .slide-indicador 
+              li:nth-child(2) .slide-circulo,
+        #slide-3:checked ~ .control-3 ~ .slide-indicador 
+              li:nth-child(3) .slide-circulo {
+            color: #428bca;
+        }
+
+        #titulo {
+            width: 100%;
+            position: absolute;
+            padding: 0px;
+            margin: 0px auto;
+            text-align: center;
+            font-size: 27px;
+            color: rgba(255, 255, 255, 1);
+            font-family: 'Open Sans', sans-serif;
+            z-index: 9999;
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+                 -1px 0px 2px rgba(255, 255, 255, 0);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- encabezado  -->
+    <div class="encabezado">
+        <header class="header">
+            <div class=" logo">
+                <h1>Kandire Fc </h1>
+                
+            </div >
+            <nav class="menu">
+                <ul class="navbar" id="navbar">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Horarios</a></li>
+                    <li><a href="#">Reservas</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <a class="close" href="#">
+                        <img src="https://ljc-dev.github.io/testing0/ham-close.svg" alt="close">
+                    </a>
+    
+                </ul>
+                    <a class="hamburger" href="#navbar">
+                        <img src="https://ljc-dev.github.io/testing0/ham.svg" alt="menu">
+                    </a>
+            </nav>   
+        </header>
+    </div>
+    <!-- fin de encabezado -->
+    <!-- inii¿cio del cuerpo  -->
+    <main>
+            <!-- <div class="img1"><img src="assets/canchas.png" alt="img"> -->
+                <div class="slide">
+                    <div class="slide-inner">
+                        <input class="slide-open" type="radio" id="slide-1" 
+                              name="slide" aria-hidden="true" hidden="" checked="checked">
+                        <div class="slide-item">
+                            <img src="assets/canchas.png">
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-2" 
+                              name="slide" aria-hidden="true" hidden="">
+                        <div class="slide-item">
+                            <img src="assets/cachas2.jpg">
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-3" 
+                              name="slide" aria-hidden="true" hidden="">
+                        <div class="slide-item">
+                            <img src="assets/churrasquera.jpg">
+                        </div>
+                        <label for="slide-3" class="slide-control prev control-1">‹</label>
+                        <label for="slide-2" class="slide-control next control-1">›</label>
+                        <label for="slide-1" class="slide-control prev control-2">‹</label>
+                        <label for="slide-3" class="slide-control next control-2">›</label>
+                        <label for="slide-2" class="slide-control prev control-3">‹</label>
+                        <label for="slide-1" class="slide-control next control-3">›</label>
+                        <ol class="slide-indicador">
+                            <li>
+                                <label for="slide-1" class="slide-circulo">•</label>
+                            </li>
+                            <li>
+                                <label for="slide-2" class="slide-circulo">•</label>
+                            </li>
+                            <li>
+                                <label for="slide-3" class="slide-circulo">•</label>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                    
+            </div>
+            <div class="contenedor2">
+                <h2>Informacion</h2> 
+                <div class="mozaico">
+                    <div class="t">
+                        <p class="titulo"> horarios de atencion:  6:00-23:00</p><p>lunes</p><p>martes</p><p>miercoles</p><p>jueves</p><p>viernes</p><p>sabado </p><p>domingo </p>
+                    </div>
+                     <div class="escudo"> 
+                         <img src="#" >
+                     </div> 
+                    <div class="t">
+                        <!-- <a class="deko" href="#"><img src="assets/deko.jpg" alt="img"> </a> -->
+                        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d237.5096624068807!2d-63.114929266465786!3d-17.7373533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e676a40c1e15%3A0x69951de3e6a831c3!2sCanchas%20Sint%C3%A9ticas%20%22Kandire%2C%20B.%20Las%20Gramas%22!5e0!3m2!1ses!2sbo!4v1657547633712!5m2!1ses!2sbo" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="main-botones">
+                        <p> Precios:<br>
+                            dia: 120bs  6:00-18:00 <br>noche:  150bs  18:00-23:00
+                        </p>
+                        <a href="https://api.whatsapp.com/send?phone=59177315999">reservar </a>
+                        
+                            
+                        
+                    </div>
+                </div> 
+            </div>
+    </main>
+    <!-- Footer -->
+
+<footer>
+    <div>
+        <h1>Ponerse en contacto</h1>
+        <h4>Siganos en nuetras redes sociales para mas información.</h4>
+    </div>
+    <div>
+        <a href="https://www.facebook.com/canchaskandirebarriolasgramas">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
+</footer>
+
+
+
+    <!-- iconos -->
+    <script src="https://kit.fontawesome.com/378e12fdd6.js" crossorigin="anonymous"></script>
+</body>
+</html>

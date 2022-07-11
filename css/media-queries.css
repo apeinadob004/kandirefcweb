@@ -1,0 +1,221 @@
+/* Large Screen */
+@media screen and (max-width:1024px){
+    main{
+        padding: 0px 40px;
+    }
+    .main-image img{
+        width: 100%;
+    }
+    .main-descripcion h3{
+        font-size: 20px;
+    }
+    .main-descripcion h1{
+        font-size: 65px;
+    }
+    .about{
+        padding: 0 40px;
+    }
+    .about-description{
+        margin-left: 30px;
+    }
+    .about-img img{
+        width: 100%;
+    }
+    .servicio-img{
+        width: 100%;
+    }
+    .contenedor{
+        margin: 0px 15px;
+    }
+    .close, .hamburger{
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 0px;
+        height: 0px;
+    }
+    .mozaico{
+        display: grid;
+        grid-template-columns : repeat(1,1fr) ;
+        grid-area: 4,1fr;
+    }
+    .mozaico div{
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        
+    }
+    .mozaico div:nth-child(1){
+        grid-column: 1/2;
+        grid-row:1/2 ;
+    }
+    .mozaico div:nth-child(2){
+        grid-column: 1/2;
+        grid-row:1/2;
+    }
+    
+    .mozaico div:nth-child(3){
+        grid-column: 1/2;
+        grid-row:2/2;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 768px){
+    .close, .hamburger{
+        display: initial;
+    }
+
+    .close, .hamburger{
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 36px;
+        height: 36px;
+    }
+    .hamburger{
+        background: var(--colorPrimario);
+    }
+    .close{
+        background: black;
+    }
+    .hamburger img, .close img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .hamburger img, .close img{
+        width: 50%;
+        height: 50%;
+    }
+
+    .navbar{
+        position: absolute;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        list-style: none;
+        background: black;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.2s ease;
+    }
+
+    .navbar:target{
+        transform: translateY(0);
+    }
+
+    li a{
+        display: block;
+        color: white !important;
+        font-weight: bold;
+        padding: 0.5rem;
+    }
+    li a:hover, li a:focus{
+        border-bottom: 1px solid white;
+    }
+
+    .menu ul{
+        justify-content: space-evenly;
+    }
+    .menu li{
+        margin-right: 0;
+    }
+    .header{
+        justify-content: center;
+    }
+    main{
+        display:contents;
+        
+    }
+    .slide{
+        height: 100vh;
+    }
+    footer{
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    footer div:last-child i{
+        margin: 0;
+    }
+    .main-botones{
+        margin-top: 5px;
+    }
+    .mozaico{
+        display: grid;
+        grid-template-columns : repeat(2,1fr) ;
+        grid-area: 3,1fr;
+    }
+    .mozaico div{
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        
+    }
+    .mozaico div:nth-child(1){
+        grid-column: 1/2;
+        grid-row:1/2 ;
+    }
+    .mozaico div:nth-child(2){
+        grid-column: 1/2;
+        grid-row:1/2;
+    }
+    
+    .mozaico div:nth-child(3){
+        grid-column: 1/2;
+        grid-row:2/2;
+    }
+
+}
+
+
+/* Dispositivo Movil L */
+@media screen and (max-width: 425px){
+    main{
+        height: auto;
+    }
+    .main-botones a:first-child, .main-botones a:last-child{
+        padding: 14px 15px;
+        font-size: 15px;
+    }
+    
+    h1,h2{
+        font-size: 30px !important;
+        text-align: center;
+    }
+    footer{
+        padding: 60px 0px;
+    }
+}
+
+/* Dispositivo Movil M */
+@media screen and (max-width: 375px){
+    
+}
+
+/* Dispositivo Movil S */
+@media screen and (max-width: 320px){
+    
+    .main-botones a:first-child, .{
+        padding: 12px 10px;
+        font-size: 10px;
+    }
+    h1, h2{
+        font-size: 20px !important;
+        text-align: center;
+    }
+    p{
+        font-size: 10px !important;
+    }
+}
