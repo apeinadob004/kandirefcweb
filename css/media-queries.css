@@ -29,6 +29,7 @@
     }
     .close, .hamburger{
         border: none;
+        display: none;
         cursor: pointer;
         position: absolute;
         top: 20px;
@@ -71,7 +72,7 @@
         border: none;
         cursor: pointer;
         position: absolute;
-        top: 20px;
+        top: 10px;
         right: 20px;
         width: 36px;
         height: 36px;
@@ -164,17 +165,23 @@
         
     }
     .mozaico div:nth-child(1){
-        grid-column: 1/2;
+        grid-column: 1/-1;
         grid-row:1/2 ;
     }
     .mozaico div:nth-child(2){
-        grid-column: 1/2;
-        grid-row:1/2;
+        grid-column:2/3 ;
+        grid-row:2/3;
     }
     
     .mozaico div:nth-child(3){
         grid-column: 1/2;
-        grid-row:2/2;
+        grid-row:2/3;
+    }
+    .mozaico div:nth-child(4){
+        grid-column: 2/3;
+        grid-row: 2/3; 
+        
+        
     }
     .slide-inner{
         margin-right: 50px;
@@ -183,7 +190,7 @@
 
 
 /* Dispositivo Movil L */
-@media screen and (max-width: 425px){
+@media screen and (max-width: 560px){
     main{
         height: auto;
     }
@@ -199,18 +206,50 @@
     footer{
         padding: 60px 0px;
     }
+    .mozaico div{
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        
+    }
+    .mozaico div:nth-child(1){
+        grid-column: 1/-1;
+        grid-row:1/2 ;
+    }
+    .mozaico div:nth-child(2){
+        grid-column:2/3 ;
+        grid-row:2/3;
+    }
+    
+    .mozaico div:nth-child(3){
+        grid-column: 1/2;
+        grid-row:2/3;
+    }
+    .mozaico div:nth-child(4){
+        grid-column: auto;
+        grid-row: auto; 
+        
+        
+    }
+    .main-botones a{
+        padding: 5px !important;
+        
+    
+    }
+
 }
 
 /* Dispositivo Movil M */
 @media screen and (max-width: 375px){
+   
     
 }
 
 /* Dispositivo Movil S */
 @media screen and (max-width: 320px){
     
-    .main-botones a:first-child, .{
-        padding: 12px 10px;
+    .main-botones a{
+        padding: 5px ;
         font-size: 10px;
     }
     h1, h2{

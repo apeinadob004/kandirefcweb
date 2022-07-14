@@ -50,6 +50,9 @@ header{
     align-items:center;
     background-color: var(--colorPrimario);
 }
+.close , .hamburger{
+    display: none;
+}
 .menu{
     margin: 15px;
 }
@@ -137,7 +140,7 @@ main {
     
 }
 .t{ 
-     padding: 10px; 
+     padding-left: 20px;  
      
  } 
 .mozaico div:nth-child(2){
